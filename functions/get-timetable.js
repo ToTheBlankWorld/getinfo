@@ -11,7 +11,7 @@ export async function handler(event) {
   const TOKEN = process.env.GITAM_TOKEN;
 
   const response = await fetch(
-    `https://studentmobileapi.gitam.edu/getattendance?regdno=${regdno}`,
+    `https://studentmobileapi.gitam.edu/gettimetable?regdno=${regdno}`,
     {
       headers: {
         "Authorization": `Bearer ${TOKEN}`,
@@ -24,7 +24,7 @@ export async function handler(event) {
   if (!response.ok) {
     return {
       statusCode: response.status,
-      body: JSON.stringify({ error: "Attendance fetch failed" })
+      body: JSON.stringify({ error: "Timetable fetch failed" })
     };
   }
 

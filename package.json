@@ -1,6 +1,4 @@
 {
   "name": "attendance-netlify",
-  "type": "module",
-  "dependencies": {
-  }
+  "type": "module"
 }
